@@ -1,4 +1,4 @@
-section.top{
+#top{
     padding-top: 160px;
     padding-bottom: 180px;
     background-image: url(../img/top_bg.jpg);
@@ -8,34 +8,48 @@ section.top{
     background-attachment: fixed;
     margin-bottom: 55px;
     #slider-top{
-         width: 35%;
-        .carousel-inner{
-           
-            .item{  
-                .carousel-caption{
-                    text-align: left;
-                    font-size: 1.6rem;
-                    line-height: 3rem;
-                    position: relative;
-                    left: 0;
-                    right: auto;
-                    bottom: auto;
-                    top: auto;
-                    padding: 0;
-                    text-shadow: none;
+         width: 40%;
+            .item{
+                .caption{
+                    color: white;
+                    font-weight: 700;
                     h2{
                         font-size: 4.6rem;
-                        line-height: 5.5rem;
                         text-transform: uppercase;
-                        font-weight: 700;
                         margin-bottom: 35px;
                     }
-                    a{
-                        margin-top: 30px;
+                    p{
+                        font-size: 1.6rem;
+                        line-height: 3rem;
+                        margin-bottom: 30px;
+                    }
+                    .button{
+                        padding: 13px 23px;
                     }
                 }
+//                .carousel-caption{
+//                    text-align: left;
+//                    font-size: 1.6rem;
+//                    line-height: 3rem;
+//                    position: relative;
+//                    left: 0;
+//                    right: auto;
+//                    bottom: auto;
+//                    top: auto;
+//                    padding: 0;
+//                    text-shadow: none;
+//                    h2{
+//                        font-size: 4.6rem;
+//                        line-height: 5.5rem;
+//                        text-transform: uppercase;
+//                        font-weight: 700;
+//                        margin-bottom: 35px;
+//                    }
+//                    a{
+//                        margin-top: 30px;
+//                    }
+//                }
             }     
-        }
         .carousel-control{
             background-image: none;
             width: 37px;
@@ -61,6 +75,37 @@ section.top{
             }
             &.right{
                 background-image: url(../img/ico_right_slider_top.png);
+            }
+        }
+        .owl-controls{
+            bottom: 0;
+            position: absolute;
+            right: 0;
+            .owl-pagination{
+                display: none;
+            }
+            .owl-buttons{
+                position: relative;
+                div{
+                    width: 37px;
+                    height: 37px;
+                    background-color: @black;
+                    opacity: 0.7;
+                    border-radius: 5px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    position: absolute;
+                    bottom: 0;
+                    text-indent: -1000em;
+                    &.owl-prev{
+                        background-image: url(../img/ico_left_slider_top.png); 
+                        right: 42px;
+                    }
+                    &.owl-next{
+                        background-image: url(../img/ico_right_slider_top.png); 
+                        right: 0;
+                    }
+                }
             }
         }
     }

@@ -55,19 +55,15 @@
     :-ms-input-placeholder {  
        color: #a1a5ad;  
     }
-    button{
-        background-color: #ee3440;
-        padding: 11px 60px;
+    .button{
+        background-color: #4cc85e;
+        padding: 12px 30px;
         margin-top: 30px;
         color: white;
-        &::after{
-            background-image: url(../img/ico_arrow_hover.png);
-        }
+        border: 0;
+        float: right;
         &:hover{
-            background-color: transparent;
-            &::after{
-                background-image: url(../img/ico_arrow.png) !important;
-            }
+            background-color: #ee3440;
         }
     }
     .box{
@@ -93,13 +89,21 @@
         }
     }
     table{
+        width: 100%;
+        display: inline-block;
+        padding: 0 40px;
         tr{
             td{
                 line-height: 4.5rem;
                 padding: 10px 0;
+                vertical-align: middle;
                 &.first{
                     margin-right: 10px;
                     min-width: 80px;    
+                }
+                i{
+                    margin-bottom: 0;
+                    vertical-align: middle;
                 }
             }
         }

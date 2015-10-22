@@ -7,7 +7,7 @@
         margin-bottom: 66px;
     }
     
-    .testimontials_slider{
+    #slider-testimonials{
         width: 90%;
         margin: 0 auto;
         font-size: 1.4rem;
@@ -19,6 +19,7 @@
         font-weight: 700;
         padding-left: 50px;
         padding-bottom: 70px;
+        position: relative;
         .carousel-caption{
             position: relative;
             left: 0;
@@ -93,6 +94,37 @@
                 background-image: url(../img/ico_right_slider_top.png);
                 left: 40px;
                 right: auto;
+            }
+        }
+        .owl-controls{
+            bottom: 0;
+            position: absolute;
+            left: 0;
+            .owl-pagination{
+                display: none;
+            }
+            .owl-buttons{
+                position: relative;
+                div{
+                    width: 37px;
+                    height: 37px;
+                    background-color: @black;
+                    opacity: 0.7;
+                    border-radius: 5px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    position: absolute;
+                    bottom: 0;
+                    text-indent: -1000em;
+                    &.owl-prev{
+                        background-image: url(../img/ico_left_slider_top.png); 
+                        left: 0;
+                    }
+                    &.owl-next{
+                        background-image: url(../img/ico_right_slider_top.png); 
+                        left: 42px;
+                    }
+                }
             }
         }
     }
