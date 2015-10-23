@@ -16,10 +16,32 @@ header{
             padding-bottom: 0;
             height: auto;
             min-height: 0;
+            padding-top: 10px;
         }
     }
     nav{
+        .button{
+            background-color: #282521;
+            padding: 12px 28px;
+            float: right;
+        }
+        &.navbar-collapse{
+            &.in{
+                background-color: white;
+                a{
+                    color: #4cc85e;
+                }
+            }
+            &.collapsing{
+                background-color: white;
+                a{
+                    color: #4cc85e;
+                }
+            }
+        }
         ul{
+            margin-top: 12px !important;
+            margin-left: 150px !important;
             li{
                 font-size: 1.4rem;
                 color: #ffffff;

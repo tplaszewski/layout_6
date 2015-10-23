@@ -244,6 +244,28 @@ header.navbar .navbar-brand {
   padding-bottom: 0;
   height: auto;
   min-height: 0;
+  padding-top: 10px;
+}
+header nav .button {
+  background-color: #282521;
+  padding: 12px 28px;
+  float: right;
+}
+header nav.navbar-collapse.in {
+  background-color: white;
+}
+header nav.navbar-collapse.in a {
+  color: #4cc85e;
+}
+header nav.navbar-collapse.collapsing {
+  background-color: white;
+}
+header nav.navbar-collapse.collapsing a {
+  color: #4cc85e;
+}
+header nav ul {
+  margin-top: 12px !important;
+  margin-left: 150px !important;
 }
 header nav ul li {
   font-size: 1.4rem;
@@ -321,7 +343,6 @@ footer .social li.youtube a {
   background-size: cover;
   background-attachment: fixed;
   margin-bottom: 55px;
-  min-height: 800px;
 }
 #top #slider-top {
   width: 40%;
@@ -828,6 +849,9 @@ footer .social li.youtube a {
   #top #slider-top {
     width: 100% !important;
   }
+  header nav ul {
+    margin-left: 20px !important;
+  }
   .quote {
     padding-top: 120px;
   }
@@ -850,10 +874,17 @@ footer .social li.youtube a {
   }
   header .navbar-header .navbar-brand {
     margin-top: 6px;
+    padding-top: 0 !important;
+  }
+  header nav ul {
+    margin-left: 0 !important;
   }
   header nav ul li a {
     padding-top: 10px !important;
     padding-bottom: 10px !important;
+  }
+  header nav .button {
+    float: left;
   }
   .counter-section article {
     margin-bottom: 20px;
