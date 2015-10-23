@@ -2,10 +2,16 @@
     
 }
 @media (max-width:991px){
-    .top{
+    #top{
+        min-height: 500px !important;
+        padding-top: 150px !important;
         #slider-top{
             width: 100% !important;
+            
         }
+    }
+    .quote{
+        padding-top: 120px;
     }
     .testimonials{
         .testimontials_slider{
@@ -54,9 +60,14 @@
             margin-bottom: 20px;
         }
     }
+    .contact{
+        table{
+            padding: 0;
+        }
+    }
     .testimonials{
-        .testimontials_slider{
-            padding-right: 110px;
+        #slider-testimonials{
+            padding-right: 0;
             .item{
                 
                 .carousel-caption{
@@ -64,7 +75,8 @@
                     width: 100%;
                 }
                 .person{
-                    position: relative;
+                    position: relative !important;
+                    margin-top: 20px;
                 }
             }
         }

@@ -250,19 +250,22 @@ header nav ul li {
   color: #ffffff;
 }
 header nav ul li a {
+  text-shadow: none;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  text-shadow: none;
+  text-shadow: none !important;
 }
 header nav ul li a:hover {
   background-color: transparent !important;
+  color: #4cc85e;
+  text-shadow: none;
 }
 header .navbar-toggle {
-  border: 1px solid #56553f;
+  border: 1px solid #4cc85e;
 }
 header .navbar-toggle .icon-bar {
-  color: #56553f;
-  background-color: #56553f;
+  color: #4cc85e;
+  background-color: #4cc85e;
 }
 footer {
   background-color: #a1a5ad;
@@ -310,7 +313,7 @@ footer .social li.youtube a {
 }
 /* blocks */
 #top {
-  padding-top: 160px;
+  padding-top: 250px;
   padding-bottom: 180px;
   background-image: url(../img/top_bg.jpg);
   background-repeat: no-repeat;
@@ -318,6 +321,7 @@ footer .social li.youtube a {
   background-size: cover;
   background-attachment: fixed;
   margin-bottom: 55px;
+  min-height: 800px;
 }
 #top #slider-top {
   width: 40%;
@@ -526,20 +530,10 @@ footer .social li.youtube a {
   padding: 20px;
 }
 .gallery_description h4 {
+  color: #ffffff;
   text-align: center;
   font-size: 1.4rem;
   font-weight: 700;
-  text-transform: uppercase;
-  position: relative;
-  top: 65%;
-}
-.gallery_description::before {
-  content: "";
-  background-image: url(../img/ico_gallery_hover.png);
-  height: 45px;
-  width: 45px;
-  display: block;
-  margin: 0 auto;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -827,8 +821,15 @@ footer .social li.youtube a {
   top: 0;
 }
 @media (max-width: 991px) {
-  .top #slider-top {
+  #top {
+    min-height: 500px !important;
+    padding-top: 150px !important;
+  }
+  #top #slider-top {
     width: 100% !important;
+  }
+  .quote {
+    padding-top: 120px;
   }
   .testimonials .testimontials_slider {
     width: 100%;
@@ -857,15 +858,19 @@ footer .social li.youtube a {
   .counter-section article {
     margin-bottom: 20px;
   }
-  .testimonials .testimontials_slider {
-    padding-right: 110px;
+  .contact table {
+    padding: 0;
   }
-  .testimonials .testimontials_slider .item .carousel-caption {
+  .testimonials #slider-testimonials {
+    padding-right: 0;
+  }
+  .testimonials #slider-testimonials .item .carousel-caption {
     padding-right: 0;
     width: 100%;
   }
-  .testimonials .testimontials_slider .item .person {
-    position: relative;
+  .testimonials #slider-testimonials .item .person {
+    position: relative !important;
+    margin-top: 20px;
   }
   .section-map .content {
     width: 100%;
