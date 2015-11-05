@@ -5,16 +5,6 @@ $(window).load(function() { // makes sure the whole site is loaded
                 $('body').delay(350).css({'overflow':'visible'});
             });
 
-//$( document ).ready(function() {
-//	var $container = jQuery('#masonry-grid');
-//	// initialize
-//	$container.masonry({
-//        itemSelector: '.grid-item',
-//        columnWidth: 1
-//	});
-//});
-
-
 $(document).ready(function(){
         $('.about').each(function(){              
             var highestBox = 0;
@@ -50,128 +40,15 @@ jQuery(document).ready(function( $ ) {
             });
 
 window.onload = function () {
-            var styles = [
-    {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-            {
-                "hue": "#76aee3"
-            },
-            {
-                "saturation": 38
-            },
-            {
-                "lightness": -11
-            },
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "all",
-        "stylers": [
-            {
-                "hue": "#8dc749"
-            },
-            {
-                "saturation": -47
-            },
-            {
-                "lightness": -17
-            },
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.park",
-        "elementType": "all",
-        "stylers": [
-            {
-                "hue": "#c6e3a4"
-            },
-            {
-                "saturation": 17
-            },
-            {
-                "lightness": -2
-            },
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "all",
-        "stylers": [
-            {
-                "hue": "#cccccc"
-            },
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 13
-            },
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.land_parcel",
-        "elementType": "all",
-        "stylers": [
-            {
-                "hue": "#5f5855"
-            },
-            {
-                "saturation": 6
-            },
-            {
-                "lightness": -31
-            },
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "elementType": "all",
-        "stylers": [
-            {
-                "hue": "#ffffff"
-            },
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 100
-            },
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": []
-    }
-];
+            var styles = [ { "featureType": "water", "stylers": [ { "color": "#b0fff8" } ] },{ "featureType": "landscape.man_made", "stylers": [ { "color": "#c9dfa7" } ] },{ "featureType": "landscape.natural", "stylers": [ { "color": "#f0eee5" } ] },{ "featureType": "road", "stylers": [ { "color": "#45c958" } ] },{ "featureType": "poi", "elementType": "geometry", "stylers": [ { "color": "#c9e0a7" } ] },{ "featureType": "administrative", "elementType": "labels.text.stroke", "stylers": [ { "visibility": "on" } ] } ];
 
         var options = {
             mapTypeControlOptions: {
                 mapTypeIds: ['Styled']
             },
             center: new google.maps.LatLng(-7.245217594087794, 112.74455556869509),
-            zoom: 16,
+            zoom: 6,
+            scrollwheel: false,
             disableDefaultUI: true,	
             mapTypeId: 'Styled'
         };
@@ -189,22 +66,6 @@ jQuery(function(){jQuery("img").load(function(){jQuery("#masonry-grid").masonry(
             });
 
 
-$(function() {
-	  $('a[href*=#]:not([href=#])').click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-
-	      var target = $(this.hash);
-	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	      if (target.length) {
-	        $('html,body').animate({
-	          scrollTop: target.offset().top
-	        }, 1000);
-	        return false;
-	      }
-	    }
-	  });
-	});
-
 $(document).ready(function() { 
     
     
@@ -220,13 +81,40 @@ $(document).ready(function() {
       slideSpeed : 300,
       paginationSpeed : 400,
       singleItem:true
-          // "singleItem:true" is a shortcut for:
-          // items : 1, 
-          // itemsDesktop : false,
-          // itemsDesktopSmall : false,
-          // itemsTablet: false,
-          // itemsMobile : false
      
   }); 
     
 }); 
+
+/*parallax*/
+$('.parallax-section').parallax({
+                speed : 0.15
+            });
+
+
+/* hide menu */
+$('.nav a').on('click', function(){
+    $('.navbar-toggle').click(); 
+});
+
+
+/*scroll height */
+
+$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				var top_offset = 0;
+				if ( $('.navbar').css('position') == 'fixed' ) {
+					top_offset = $('.navbar').height();
+				}
+				 $('html,body').animate({
+					 scrollTop: target.offset().top - top_offset
+				}, 1000);
+				return false;
+			}
+		}
+	});	
+	});

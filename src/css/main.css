@@ -2,6 +2,7 @@
 @import "../css/bootstrap-theme.min.css";
 @import "../css/libs/animate.css";
 @import "../css/jquery.fancybox.css";
+@import "../css/owl.carousel.css";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -185,8 +186,8 @@ h3 {
   color: #21282f;
   font-weight: 700;
   text-transform: uppercase;
-  border-bottom: 2px solid #d3d7dc;
-  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(36, 53, 83, 0.2);
+  padding-bottom: 12px;
   letter-spacing: 0.1em;
 }
 h4 {
@@ -198,7 +199,7 @@ h4 {
 }
 i {
   font-size: 4rem;
-  margin-bottom: 25px;
+  margin-bottom: 33px;
   display: inline-block;
   color: #4cc85e;
 }
@@ -230,6 +231,7 @@ a:hover {
 }
 header.navbar {
   padding: 37px 0;
+  padding-top: 55px;
   position: absolute;
   top: 0;
   left: 0;
@@ -251,6 +253,9 @@ header nav .button {
   padding: 12px 28px;
   float: right;
 }
+header nav.navbar-collapse {
+  text-align: center;
+}
 header nav.navbar-collapse.in {
   background-color: white;
 }
@@ -265,7 +270,8 @@ header nav.navbar-collapse.collapsing a {
 }
 header nav ul {
   margin-top: 12px !important;
-  margin-left: 150px !important;
+  display: inline-block;
+  float: none !important;
 }
 header nav ul li {
   font-size: 1.4rem;
@@ -319,7 +325,7 @@ footer .social li a:hover {
   opacity: 0.8;
 }
 footer .social li.google a {
-  background-position: -2px 0;
+  background-position: -2px 2px;
 }
 footer .social li.facebook a {
   background-position: -45px 0;
@@ -335,34 +341,36 @@ footer .social li.youtube a {
 }
 /* blocks */
 #top {
-  padding-top: 250px;
-  padding-bottom: 180px;
+  height: 816px;
   background-image: url(../img/top_bg.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
-  margin-bottom: 55px;
 }
 #top #slider-top {
-  width: 40%;
+  width: 33%;
+  padding-top: 24%;
 }
 #top #slider-top .item .caption {
   color: white;
-  font-weight: 700;
+  font-weight: 400;
 }
 #top #slider-top .item .caption h2 {
   font-size: 4.6rem;
   text-transform: uppercase;
-  margin-bottom: 35px;
+  margin-bottom: 19px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 #top #slider-top .item .caption p {
   font-size: 1.6rem;
   line-height: 3rem;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+  text-align: justify;
 }
 #top #slider-top .item .caption .button {
-  padding: 13px 23px;
+  padding: 11px 26px;
 }
 #top #slider-top .carousel-control {
   background-image: none;
@@ -407,8 +415,7 @@ footer .social li.youtube a {
 #top #slider-top .owl-controls .owl-buttons div {
   width: 37px;
   height: 37px;
-  background-color: #21282f;
-  opacity: 0.7;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -425,11 +432,11 @@ footer .social li.youtube a {
   right: 0;
 }
 .about {
-  padding-bottom: 100px;
-  padding-top: 80px;
+  padding-bottom: 81px;
+  padding-top: 54px;
 }
 .about h3 {
-  margin-bottom: 50px;
+  margin-bottom: 46px;
   text-align: left;
 }
 .about .content {
@@ -438,7 +445,7 @@ footer .social li.youtube a {
   text-align: center;
   width: 80%;
   margin: 0 auto;
-  margin-bottom: 100px;
+  margin-bottom: 87px;
   color: #a1a5ad;
   font-weight: 700;
 }
@@ -447,11 +454,13 @@ footer .social li.youtube a {
   margin-bottom: 27px;
   font-weight: 700;
   color: #a1a5ad;
-  padding-bottom: 40px;
+  padding-bottom: 31px;
+  margin-left: 20px;
+  margin-right: 20px;
   border-bottom: 4px solid #4cc85e;
 }
 .about article h4 {
-  margin-bottom: 45px;
+  margin-bottom: 39px;
 }
 .about article p {
   line-height: 2.4rem;
@@ -473,8 +482,8 @@ footer .social li.youtube a {
   font-size: 3.2rem;
   line-height: 4.8rem;
   text-transform: uppercase;
-  padding-top: 430px;
-  padding-bottom: 120px;
+  padding-top: 22.5%;
+  padding-bottom: 56px;
   text-align: left;
   color: #ffffff;
   font-weight: 700;
@@ -487,22 +496,24 @@ footer .social li.youtube a {
   font-size: 3.2rem;
 }
 .features {
-  padding: 75px 0;
+  padding: 51px 0;
 }
 .features h3 {
-  margin-bottom: 65px;
+  margin-bottom: 70px;
 }
 .features article {
   font-size: 1.6rem;
   margin-bottom: 27px;
-  padding: 40px 15px;
+  padding: 40px 0;
+  margin-left: 20px;
+  margin-right: 20px;
   border-bottom: 4px solid #4cc85e;
   font-weight: 700;
 }
 .features article h4 {
   font-size: 2.6rem;
   text-transform: uppercase;
-  margin-bottom: 35px;
+  margin-bottom: 23px;
 }
 .features article p {
   line-height: 2.4rem;
@@ -510,10 +521,10 @@ footer .social li.youtube a {
 }
 /* gallery */
 .gallery {
-  padding-top: 90px;
+  padding-top: 71px;
 }
 .gallery h3 {
-  margin-bottom: 56px;
+  margin-bottom: 81px;
 }
 .fancybox-skin {
   background-color: transparent;
@@ -531,24 +542,20 @@ footer .social li.youtube a {
   max-width: 100%;
 }
 .gallery-box:hover {
-  z-index: 999999;
+  z-index: 99;
 }
 .gallery_description {
   position: absolute;
-  height: 100%;
-  width: 100%;
-  top: auto;
+  height: 90%;
+  width: 90%;
+  top: 0;
   bottom: 0;
-  opacity: 1;
-  -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
-          transform: translateY(100%);
+  opacity: 0;
   -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
           transition: transform 0.4s, opacity 0.1s 0.3s;
-  padding: 20px 10px;
   color: #ffffff;
   background-color: #4cc85e;
-  padding: 20px;
+  margin: 5%;
 }
 .gallery_description h4 {
   color: #ffffff;
@@ -577,33 +584,33 @@ footer .social li.youtube a {
   color: white;
 }
 .counter-section article {
-  border-radius: 15px;
+  border-radius: 5px;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 47px;
   background-color: #4cc85e;
 }
 .counter-section article div {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
+  font-weight: 700;
 }
 .counter-section article div.middle {
-  font-size: 8rem;
-  font-weight: 300;
+  font-size: 9rem;
 }
 .counter-section article div.bottom {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .counter-section article div.top {
-  margin-bottom: 40px;
+  margin-bottom: 27px;
 }
 .testimonials {
   padding: 87px 0;
   position: relative;
-  z-index: 9999;
+  z-index: 998;
+  margin-bottom: 40px;
 }
 .testimonials h3 {
-  font-weight: 400;
-  margin-bottom: 66px;
+  margin-bottom: 98px;
 }
 .testimonials #slider-testimonials {
   width: 90%;
@@ -615,7 +622,7 @@ footer .social li.youtube a {
   text-shadow: none;
   color: #a1a5ad;
   font-weight: 700;
-  padding-left: 50px;
+  padding-left: 75px;
   padding-bottom: 70px;
   position: relative;
 }
@@ -708,7 +715,7 @@ footer .social li.youtube a {
 .testimonials #slider-testimonials .owl-controls .owl-buttons div {
   width: 37px;
   height: 37px;
-  background-color: #21282f;
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 0.7;
   border-radius: 5px;
   background-repeat: no-repeat;
@@ -727,8 +734,7 @@ footer .social li.youtube a {
 }
 .contact {
   font-size: 2.1rem;
-  text-transform: uppercase;
-  padding-top: 75px;
+  padding-top: 98px;
   padding-bottom: 40px;
   color: #a1a5ad;
   font-weight: 700;
@@ -737,7 +743,7 @@ footer .social li.youtube a {
   margin-bottom: 17px;
 }
 .contact h3 {
-  margin-bottom: 40px;
+  margin-bottom: 56px;
 }
 .contact input {
   border: 0;
@@ -749,7 +755,7 @@ footer .social li.youtube a {
   display: inline-block;
   width: 100%;
   margin-right: 9px;
-  margin-bottom: 7px;
+  margin-bottom: 26px;
   background-color: transparent;
 }
 .contact textarea {
@@ -784,7 +790,7 @@ footer .social li.youtube a {
 .contact .button {
   background-color: #4cc85e;
   padding: 12px 30px;
-  margin-top: 30px;
+  margin-top: 5px;
   color: white;
   border: 0;
   float: right;
@@ -820,6 +826,7 @@ footer .social li.youtube a {
   line-height: 4.5rem;
   padding: 10px 0;
   vertical-align: middle;
+  padding-bottom: 24px;
 }
 .contact table tr td.first {
   margin-right: 10px;
@@ -833,7 +840,7 @@ footer .social li.youtube a {
   position: relative;
   padding-top: 45px;
   padding-bottom: 45px;
-  min-height: 580px;
+  min-height: 548px;
 }
 #map {
   width: 100%;
@@ -869,6 +876,17 @@ footer .social li.youtube a {
   .one-of-four {
     width: 50%;
   }
+  header {
+    position: fixed !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999 !important;
+  }
+  header.navbar {
+    height: 134px;
+    margin-bottom: 0;
+  }
   header .navbar-header .navbar-toggle {
     margin-top: 0;
   }
@@ -878,6 +896,10 @@ footer .social li.youtube a {
   }
   header nav ul {
     margin-left: 0 !important;
+    float: left !important;
+    text-align: left;
+    display: block;
+    width: 100%;
   }
   header nav ul li a {
     padding-top: 10px !important;
@@ -885,6 +907,13 @@ footer .social li.youtube a {
   }
   header nav .button {
     float: left;
+  }
+  #top .caption {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #top .owl-controls {
+    right: 20px !important;
   }
   .counter-section article {
     margin-bottom: 20px;
@@ -905,6 +934,9 @@ footer .social li.youtube a {
   }
   .section-map .content {
     width: 100%;
+  }
+  footer .social {
+    margin-top: 20px;
   }
 }
 @media (max-width: 480px) {
@@ -928,6 +960,9 @@ body {
   margin: 0;
   position: relative;
 }
+.wow:first-child {
+  visibility: hidden;
+}
 /* Preloader */
 #preloader {
   position: fixed;
@@ -937,7 +972,7 @@ body {
   bottom: 0;
   background-color: #0c0c0c;
   /* change if the mask should have another color then white */
-  z-index: 99;
+  z-index: 9999;
   /* makes sure it stays on top */
 }
 #status {

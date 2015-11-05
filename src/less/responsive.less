@@ -42,6 +42,15 @@
         width: 50%;
     }
     header{
+        position: fixed !important;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999 !important;
+        &.navbar{
+            height: 134px;
+            margin-bottom: 0;
+        }
         .navbar-header{
             .navbar-toggle{
                 margin-top: 0;
@@ -53,8 +62,13 @@
             
         }
         nav{
+            
             ul{
                 margin-left: 0 !important;
+                float: left !important;
+                text-align: left;
+                display: block;
+                width: 100%;
                 li{
                     a{
                         padding-top: 10px !important;
@@ -68,6 +82,15 @@
             }
         }
         
+    }
+    #top{
+        .caption{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .owl-controls{
+            right: 20px !important;
+        }
     }
     .counter-section{
         article{
@@ -99,6 +122,11 @@
         .content{
             width: 100%;
         }    
+    } 
+    footer{
+        .social{
+            margin-top: 20px;
+        }
     } 
 }
 @media (max-width:480px){
